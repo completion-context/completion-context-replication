@@ -94,6 +94,7 @@ To Set up a new GCS Bucket for training and fine-tuning a T5 Model, please follo
     | warmupcosine | 1e-5          | 0.29 |
     | warmuplinear | 3e-5          | 0.34 |
     | warmuplinear | 1e-5          | 0.28 |
+  
   The trained model for best configuration found (constant scheduler with 3e-5 learning rate) is stored in `TSDAE/tsdae_best_configuration` folder.
   The notebook we used for training the 6 models can be found in `TSDAE/trained_configurations`
   Once chosen the best configuration, we used that configuration to find the most similar issue for each dataset instance. The notebook can be found in `TSDAE/dataset_building`
