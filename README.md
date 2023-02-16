@@ -13,12 +13,12 @@ To Set up a new GCS Bucket for training and fine-tuning a T5 Model, please follo
 ### Pipeline
 * ##### Datasets
 
-    You can find the datasets used for pretraining and fine-tuning the models [here](Zenodo URL) inside `datasets` folder. 
+    You can find the datasets used for pretraining and fine-tuning the models [here](https://zenodo.org/record/7643970) inside `datasets` folder. 
     We shared all the 20 finetuning datasets (one for each context we experimented with, including the limited context presented in the validity section).
 
 * ##### Tokenizer
     
-    You can find the dataset used for training the tokenizer (featuring 1M random instances for pretraining dataset and around 700k instances from C4 corpus [here](Zenodo URL) inside `tokenizers` folder.
+    You can find the dataset used for training the tokenizer (featuring 1M random instances for pretraining dataset and around 700k instances from C4 corpus [here](https://zenodo.org/record/7643970) inside `tokenizers` folder.
     You can train the SentencePiece tokenizer in this way
     ```
     ./spm_train --input=tokenizer_training.txt  --model_prefix=SP --vocab_size=32000 --bos_id=-1  --eos_id=1 --unk_id=2 --pad_id=0 --shuffle_input_sentence=true --character_coverage=1.0)
@@ -29,7 +29,7 @@ To Set up a new GCS Bucket for training and fine-tuning a T5 Model, please follo
     
     For pretraining the model you can find the notebook **pretraining.ipynb** in the `Pretraining` folder. 
     You can also find the gin file for config in the `configuration_file` subfolder and the trained tokenizer in the `tokenizer_model` subfolder.
-    The pretrained model is available [here](Zenodo URL) inside the `pretrained_model` folder
+    The pretrained model is available [here](https://zenodo.org/record/7643970) inside the `pretrained_model` folder
     
 * ##### Hyper Parameter tuning
 
@@ -48,7 +48,7 @@ To Set up a new GCS Bucket for training and fine-tuning a T5 Model, please follo
     python3 perfect_predictions.py --folder <folder_with_predictions> 
     ```
     In the **--folder** you have to save all the files generated during the evaluation by tensorflow (input file, target file, and prediction file with the specific configuration).
-    You can find [here](Zenodo URL) the HP tuning models and the files for the predictions inside the `hp_tuning` folder.
+    You can find [here](https://zenodo.org/record/7643970) the HP tuning models and the files for the predictions inside the `hp_tuning` folder.
     
     Then we evaluated the performance; the best model was **constant**.
     Here the **percentage of perfect predictions** for each configuration:
@@ -79,7 +79,7 @@ To Set up a new GCS Bucket for training and fine-tuning a T5 Model, please follo
     
     The results are reported in the paper are also present in the **results_test_set.md** file.
    
-    You can find the models and the predictions [here](Zenodo URL) inside the `finetuning` folder.
+    You can find the models and the predictions [here](https://zenodo.org/record/7643970) inside the `finetuning` folder.
   
 * ##### TSDAE   
   
@@ -101,7 +101,7 @@ To Set up a new GCS Bucket for training and fine-tuning a T5 Model, please follo
 * ##### Confidence of the model    
 
     We leverage the confidence of the models to further improve the achieved performance.
-    We stored the scores for each model and the predictions of the confidence model [here](Zenodo URL) inside the `confidence_model` folder.
+    We stored the scores for each model and the predictions of the confidence model [here](https://zenodo.org/record/7643970) inside the `Confidence_model` folder.
     The script to generate the predictions for the score model, that keeps into account the confidence of each model, can be found in `confidence_model` folder.
     
 * ##### Statistical analysis    
